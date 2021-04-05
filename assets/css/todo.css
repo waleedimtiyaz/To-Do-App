@@ -4,3 +4,7 @@
     margin: 0 auto;
 }
 
+.clickedli{
+    color: cadetblue;
+    text-decoration: line-through;
+}
