@@ -1,15 +1,18 @@
 // Clicking li
-$("li").click(function (){
+$("ul").on("click","li", function (){
    $(this).toggleClass("clickedli")
 });
 
 // removing li
-$("span").click(function(){
-    $(this).parent().remove()
+$("ul").on("click", "span", function(event){
+    $(this).parent().fadeOut(369, function (){
+        $(this).remove()
+    })
+    event.stopPropagation();
 });
 
 // adding li
-$("input").keypress(function(){
+$("input").keypress(function(event){
     if(event.which === 13) {
         var newText = $(this).val()
         $(this).val("")
